@@ -1,11 +1,5 @@
-import { LucideIcon } from "lucide-react";
-import React, { ReactNode } from "react";
-
-type PerkCard = {
-  name: string;
-  icon: ReactNode;
-  description: string;
-};
+import React from "react";
+import { PerkCard } from "@/lib/types";
 
 function PerkCard({ name, icon, description }: PerkCard) {
   return (

@@ -10,6 +10,8 @@ describe("HeroButtons", () => {
 
     expect(button).toBeInTheDocument();
     expect(button).toHaveTextContent("Our quality promise");
+
+    // TODO: test HTML character entity &rarr; inside the button
   });
 
   it("renders a link with text and href", () => {

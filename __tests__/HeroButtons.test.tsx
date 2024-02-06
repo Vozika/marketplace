@@ -3,9 +3,11 @@ import { render, screen } from "@testing-library/react";
 import HeroButtons from "@/components/HeroSection/HeroButtons";
 
 describe("HeroButtons", () => {
-  it("renders a button with text", () => {
+  beforeEach(() => {
     render(<HeroButtons />);
+  });
 
+  it("renders a button with text", () => {
     const button = screen.getByRole("button");
 
     expect(button).toBeInTheDocument();
@@ -15,8 +17,6 @@ describe("HeroButtons", () => {
   });
 
   it("renders a link with text and href", () => {
-    render(<HeroButtons />);
-
     const link = screen.getByRole("link", { name: "Browse Trending" });
 
     expect(link).toBeInTheDocument();

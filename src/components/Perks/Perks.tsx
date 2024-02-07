@@ -13,7 +13,7 @@ function Perks() {
               key={perk.name}
               name={perk.name}
               description={perk.description}
-              icon={<perk.Icon />}
+              icon={<perk.Icon data-testid="perk-icon" />}
             />
           ))}
         </div>

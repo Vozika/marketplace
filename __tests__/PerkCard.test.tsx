@@ -22,7 +22,6 @@ describe("PerkCard", () => {
 
   it("renders a description prop", () => {
     const description = screen.getByText("test description");
-
     expect(description).toBeInTheDocument();
   });
 

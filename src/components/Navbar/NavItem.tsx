@@ -36,7 +36,7 @@ function NavItem({ isOpen, isAnyOpen, handleOpen, category }: NavItemProps) {
           )}
         >
           <div
-            className="absolute inset-0 top-1/2 bg-white shadow"
+            className="absolute inset-0 top-1/2 bg-white shadow-md"
             aria-hidden="true"
           />
 
@@ -49,7 +49,7 @@ function NavItem({ isOpen, isAnyOpen, handleOpen, category }: NavItemProps) {
                       key={item.name}
                       className="group relative text-base sm:text-sm"
                     >
-                      <div className="relative aspect-video overflow-hidden rounded-lg bg-gray-100 group-hover:opacity-75">
+                      <div className="relative aspect-video overflow-hidden rounded-lg bg-gray-100 group-hover:opacity-75 shadow-md">
                         <Image
                           src={item.imageSrc}
                           alt="Product category image"

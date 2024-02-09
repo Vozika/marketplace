@@ -20,3 +20,5 @@ export type NavItemProps = {
   isOpen: boolean;
   isAnyOpen: boolean;
 };
+
+export type Event = MouseEvent | TouchEvent;

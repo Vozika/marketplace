@@ -21,4 +21,9 @@ export type NavItemProps = {
   isAnyOpen: boolean;
 };
 
+export type AccountButtonProps = {
+  href: string;
+  text: string;
+};
+
 export type Event = MouseEvent | TouchEvent;

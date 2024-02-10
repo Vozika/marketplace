@@ -31,28 +31,30 @@ function NavItems() {
   });
 
   return (
-    <div className="flex gap-4 h-full" ref={navRef}>
-      {PRODUCT_CATEGORIES.map((category, index) => {
-        const handleOpen = () => {
-          if (activeIndex === index) {
-            setActiveIndex(null);
-          } else {
-            setActiveIndex(index);
-          }
-        };
+    <div className="hidden z-50 lg:ml-8 lg:block lg:self-stretch">
+      <div className="flex gap-4 h-full" ref={navRef}>
+        {PRODUCT_CATEGORIES.map((category, index) => {
+          const handleOpen = () => {
+            if (activeIndex === index) {
+              setActiveIndex(null);
+            } else {
+              setActiveIndex(index);
+            }
+          };
 
-        const isOpen = index === activeIndex;
+          const isOpen = index === activeIndex;
 
-        return (
-          <NavItem
-            key={category.value}
-            category={category}
-            handleOpen={handleOpen}
-            isOpen={isOpen}
-            isAnyOpen={isAnyOpen}
-          />
-        );
-      })}
+          return (
+            <NavItem
+              key={category.value}
+              category={category}
+              handleOpen={handleOpen}
+              isOpen={isOpen}
+              isAnyOpen={isAnyOpen}
+            />
+          );
+        })}
+      </div>
     </div>
   );
 }

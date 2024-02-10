@@ -1,6 +1,5 @@
-import React from "react";
 import MaxWidthWrapper from "@/components/MaxWidthWrapper/MaxWidthWrapper";
-import PerkCard from "./PerkCard";
+import PerkCard from "@/components/Perks/PerkCard";
 import { perks } from "@/lib/perks";
 
 function Perks() {

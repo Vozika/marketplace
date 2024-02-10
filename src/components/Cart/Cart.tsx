@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import {
   Sheet,
   SheetContent,
@@ -8,11 +7,11 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "../ui/sheet";
+} from "@/components/ui/sheet";
 import { ShoppingCart } from "lucide-react";
-import { Separator } from "../ui/separator";
+import { Separator } from "@/components/ui/separator";
 import { formatPrice } from "@/lib/utils";
-import { buttonVariants } from "../ui/button";
+import { buttonVariants } from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
 

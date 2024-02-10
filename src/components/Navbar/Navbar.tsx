@@ -1,9 +1,8 @@
-import React from "react";
-import MaxWidthWrapper from "../MaxWidthWrapper/MaxWidthWrapper";
-import NavItems from "./NavItems";
-import Logo from "../Logo/Logo";
-import Cart from "../Cart/Cart";
-import AccountMenu from "../AccountMenu/AccountMenu";
+import MaxWidthWrapper from "@/components/MaxWidthWrapper/MaxWidthWrapper";
+import NavItems from "@/components/Navbar/NavItems";
+import Logo from "@/components/Logo/Logo";
+import Cart from "@/components/Cart/Cart";
+import AccountMenu from "@/components/AccountMenu/AccountMenu";
 
 function Navbar() {
   const user = null;

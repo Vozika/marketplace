@@ -1,6 +1,5 @@
-import React from "react";
 import Link from "next/link";
-import { Icons } from "../Icons/Icons";
+import { Icons } from "@/components/Icons/Icons";
 
 function Logo() {
   return (

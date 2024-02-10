@@ -1,4 +1,3 @@
-import React from "react";
 import { PerkCard } from "@/lib/types";
 
 function PerkCard({ name, icon, description }: PerkCard) {

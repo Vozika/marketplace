@@ -27,3 +27,5 @@ export type AccountButtonProps = {
 };
 
 export type Event = MouseEvent | TouchEvent;
+
+export type User = { user: boolean | null };

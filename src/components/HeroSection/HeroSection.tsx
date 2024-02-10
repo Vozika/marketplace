@@ -1,4 +1,3 @@
-import React from "react";
 import HeroButtons from "@/components/HeroSection/HeroButtons";
 import HeroHeading from "@/components/HeroSection/HeroHeading";
 import MaxWidthWrapper from "@/components/MaxWidthWrapper/MaxWidthWrapper";

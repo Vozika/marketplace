@@ -1,5 +1,3 @@
-import React from "react";
-
 function HeroHeading() {
   return (
     <div className="text-center flex flex-col items-center">

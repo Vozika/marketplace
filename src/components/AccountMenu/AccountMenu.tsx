@@ -1,28 +1,26 @@
-import React from "react";
-import AccountButton from "./AccountButton";
-import AccountMenuDivider from "./AccountMenuDivider";
+import AccountButton from "@/components/AccountMenu/AccountButton";
+import AccountMenuDivider from "@/components/AccountMenu/AccountMenuDivider";
+import { User } from "@/lib/types";
 
-function AccountMenu({ user }: { user: boolean | null }) {
+function AccountMenu({ user }: User) {
   return (
-    <div className="ml-auto flex items-center">
-      <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
-        {user ? null : (
-          <>
-            <AccountButton href="/sign-in" text="Sign In" />
-            <AccountMenuDivider />
-          </>
-        )}
+    <div className="hidden ml-auto lg:flex lg:items-center lg:justify-end lg:space-x-6">
+      {user ? null : (
+        <>
+          <AccountButton href="/sign-in" text="Sign In" />
+          <AccountMenuDivider />
+        </>
+      )}
 
-        {user ? (
-          <>
-            <p>User Menu</p>
-          </>
-        ) : (
-          <AccountButton href="/sign-up" text="Create Account" />
-        )}
+      {user ? (
+        <>
+          <p>User Menu</p>
+        </>
+      ) : (
+        <AccountButton href="/sign-up" text="Create Account" />
+      )}
 
-        <AccountMenuDivider />
-      </div>
+      <AccountMenuDivider />
     </div>
   );
 }

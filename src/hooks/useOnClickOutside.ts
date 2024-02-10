@@ -1,3 +1,5 @@
+//Use this to close navbar clicking anywhere on a page
+
 import { RefObject, useEffect } from "react";
 import { Event } from "@/lib/types";
 

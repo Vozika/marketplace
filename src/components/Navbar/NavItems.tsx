@@ -6,6 +6,7 @@ import { useOnClickOutside } from "@/hooks/useOnClickOutside";
 
 function NavItems() {
   const [activeIndex, setActiveIndex] = useState<null | number>(null);
+  const isAnyOpen = activeIndex !== null;
 
   // Closes the navbar menu on clicking the escape key on keyboard
   useEffect(() => {
@@ -21,8 +22,6 @@ function NavItems() {
       document.removeEventListener("keydown", handler);
     };
   }, []);
-
-  const isAnyOpen = activeIndex !== null;
 
   // Closes the navbar menu on click outside of the navbar
   const navRef = useRef<HTMLDivElement | null>(null);

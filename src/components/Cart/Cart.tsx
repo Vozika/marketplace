@@ -14,11 +14,18 @@ import { formatPrice } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
 import Link from "next/link";
 
-import EmptyCart from "./EmptyCart";
+import EmptyCart from "@/components/Cart/EmptyCart";
+import PriceOption from "@/components/Cart/PriceOption";
 
 function Cart() {
-  const itemCount = 0;
+  const itemCount = 10;
   const fee = 5;
+
+  const priceOptions = [
+    { name: "Shipping", price: "Free" },
+    { name: "Transaction Fee", price: formatPrice(fee) },
+    { name: "Total", price: formatPrice(fee) },
+  ];
 
   return (
     <div className="ml-4 flow-root lg:ml-6">
@@ -40,26 +47,19 @@ function Cart() {
           {itemCount > 0 ? (
             <>
               <div className="flex w-full flex-col pr-6">
-                {/* TODO: cart logic */}Cart items
+                Cart items{/* TODO: cart logic */}
               </div>
               <div className="space-y-4 pr-6">
                 <Separator />
 
                 <div className="space-y-1.5 text-sm">
-                  <div className="flex">
-                    <span className="flex-1">Shipping</span>
-                    <span>Free</span>
-                  </div>
-
-                  <div className="flex">
-                    <span className="flex-1">Transaction Fee</span>
-                    <span>{formatPrice(fee)}</span>
-                  </div>
-
-                  <div className="flex">
-                    <span className="flex-1">Total</span>
-                    <span>{formatPrice(fee)}</span>
-                  </div>
+                  {priceOptions.map((option) => (
+                    <PriceOption
+                      key={option.name}
+                      name={option.name}
+                      price={option.price}
+                    />
+                  ))}
                 </div>
                 <SheetFooter>
                   <SheetTrigger asChild>

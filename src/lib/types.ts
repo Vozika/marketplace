@@ -26,6 +26,11 @@ export type AccountButtonProps = {
   text: string;
 };
 
+export type PriceOptionProps = {
+  name: string;
+  price: string;
+};
+
 export type Event = MouseEvent | TouchEvent;
 
 export type User = { user: boolean | null };

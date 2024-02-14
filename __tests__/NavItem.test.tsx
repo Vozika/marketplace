@@ -29,7 +29,7 @@ describe("NavItem", () => {
 
   it("renders a shadow effect div", () => {
     const shadow = screen.getByTestId("shadow-div");
-    
+
     expect(shadow).toBeInTheDocument();
   });
 });

@@ -21,6 +21,12 @@ export type NavItemProps = {
   isAnyOpen: boolean;
 };
 
+export type NavItemCardProps = {
+  name: string;
+  imageSrc: string;
+  href: string;
+};
+
 export type AccountButtonProps = {
   href: string;
   text: string;

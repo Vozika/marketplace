@@ -4,8 +4,7 @@ import { Button } from "@/components/ui/button";
 import { NavItemProps } from "@/lib/types";
 import { ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
-import Image from "next/image";
-import Link from "next/link";
+import NavItemCard from "./NavItemCard";
 
 function NavItem({ isOpen, isAnyOpen, handleOpen, category }: NavItemProps) {
   return (
@@ -45,29 +44,12 @@ function NavItem({ isOpen, isAnyOpen, handleOpen, category }: NavItemProps) {
           <div className="mx-auto max-w-7xl px-8">
             <div className="grid grid-cols-3 gap-x-8 py-16">
               {category.featured.map((item) => (
-                <div
+                <NavItemCard
                   key={item.name}
-                  className="group relative text-base sm:text-sm"
-                >
-                  <div className="relative aspect-video overflow-hidden rounded-lg bg-gray-100 group-hover:opacity-75 shadow-md">
-                    <Image
-                      src={item.imageSrc}
-                      alt="Product category image"
-                      fill
-                      className="object-cover object-center"
-                    />
-                  </div>
-
-                  <Link
-                    href={item.href}
-                    className="mt-6 block font-medium text-gray-900"
-                  >
-                    {item.name}
-                  </Link>
-                  <p className="mt-1" aria-hidden="true">
-                    Shop now
-                  </p>
-                </div>
+                  imageSrc={item.imageSrc}
+                  href={item.href}
+                  name={item.name}
+                />
               ))}
             </div>
           </div>

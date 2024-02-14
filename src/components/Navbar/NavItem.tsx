@@ -18,6 +18,7 @@ function NavItem({ isOpen, isAnyOpen, handleOpen, category }: NavItemProps) {
         >
           {category.label}
           <ChevronDown
+            data-testid="chevron-icon"
             className={cn("h-4 w-4 transition-all text-muted-foreground", {
               "-rotate-180": isOpen,
             })}
@@ -27,7 +28,6 @@ function NavItem({ isOpen, isAnyOpen, handleOpen, category }: NavItemProps) {
 
       {isOpen ? (
         <div
-        
           // TODO: check if animation on !isAnyOpen is really working
           className={cn(
             "absolute inset-x-0 top-full text-sm text-muted-foreground bg-white",
@@ -39,6 +39,7 @@ function NavItem({ isOpen, isAnyOpen, handleOpen, category }: NavItemProps) {
           <div
             className="absolute inset-0 top-1/2 bg-white shadow-md"
             aria-hidden="true"
+            data-testid="shadow-div"
           />
 
           <div className="mx-auto max-w-7xl px-8">

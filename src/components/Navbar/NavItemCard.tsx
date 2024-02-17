@@ -11,6 +11,7 @@ function NavItemCard({ imageSrc, href, name }: NavItemCardProps) {
           alt="Product category image"
           fill
           className="object-cover object-center"
+          priority={true}
         />
       </div>
 

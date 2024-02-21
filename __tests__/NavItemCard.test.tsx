@@ -22,7 +22,7 @@ describe("NavItemCard", () => {
     expect(img).toBeInTheDocument();
   });
 
-  it("renders a shop now phrase", () => {
+  it("renders the shop now phrase", () => {
     const words = screen.getByText("Shop now");
 
     expect(words).toBeInTheDocument();

@@ -24,10 +24,11 @@ describe("NavItem (opened item)", () => {
     expect(button).toBeInTheDocument();
   });
 
-  it("renders a chevron icon", () => {
+  it("renders a chevron icon that is rotated", () => {
     const chevron = screen.getByTestId("chevron-icon");
 
     expect(chevron).toBeInTheDocument();
+    expect(chevron).toHaveClass("-rotate-180");
   });
 
   it("renders a shadow effect div", () => {
@@ -69,10 +70,11 @@ describe("NavItem (closed item, button only)", () => {
     expect(button).toBeInTheDocument();
   });
 
-  it("renders a chevron icon", () => {
+  it("renders a chevron icon that is not rotated", () => {
     const chevron = screen.getByTestId("chevron-icon");
 
     expect(chevron).toBeInTheDocument();
+    expect(chevron).not.toHaveClass("-rotate-180");
   });
 
   it("doesn't render a link", () => {
